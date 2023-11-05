@@ -67,12 +67,12 @@ export const PostPage = () => {
 
     return (
         <div className='px-6'>
-            <div className='flex gap-10 py-8'>
-                <div className='w-2/3 flex flex-col gap-y-[15px]'>
+            <div className='lg:flex gap-10 py-8'>
+                <div className='w-96 mx-auto lg:w-2/3 flex flex-col gap-y-[15px]'>
                     <div className='border rounded-md border-gray overflow-hidden'>
                         <div 
                             className={
-                                post?.imageURL ? 'flex rounded-sm h-80' : 'flex rounded-sm'
+                                post?.imageURL ? 'flex rounded-sm h-40 lg:h-80' : 'flex rounded-sm'
                             }
                         >
                             {post?.imageURL && (
@@ -84,15 +84,15 @@ export const PostPage = () => {
                         </div>
                     <div className='p-10'>
                         <div className='flex justify-between items-center'>
-                            <div className='text-lg font-normal'>
+                            <div className='text-base lg:text-lg font-normal'>
                                 {post.username}
                             </div>
-                            <div className='text-xs text-zinc-400'>
+                            <div className='text-[11px] lg:text-xs text-zinc-400'>
                                 <Moment date={post.createdAt} format='D MMM YYYY' />
                             </div>
                         </div>
-                        <div className='font-black text-3xl'>{post.title}</div>
-                        <p className='text-sm text-gray line-clamp-4'>{post.text}</p>
+                        <div className='font-black text-2xl lg:text-3xl'>{post.title}</div>
+                        <p className='text-xs lg:text-sm text-gray line-clamp-4'>{post.text}</p>
                     <div className='flex gap-3 items-center mt-2 justify-between'>
                         <div className='flex gap-3 mt-4'>
                             <button className='flex items-center justify-center gap-2 text-xs text-white opacity-50'>
@@ -124,7 +124,7 @@ export const PostPage = () => {
                     </div>
                 </div>
                     </div>
-                <div className='w-1/3 p-8 bg-gray-700 flex flex-col gap-2 rounded-sm'>
+                <div className='w-96 mx-auto lg:w-1/3 lg:p-8 mt-8 lg:mt-0 bg-gray-700 flex flex-col gap-2 rounded-sm'>
                     <form 
                         className='flex gap-2'
                         onSubmit={e => e.preventDefault()}
@@ -134,12 +134,12 @@ export const PostPage = () => {
                             value={comment}
                             onChange={e => setComment(e.target.value)}
                             placeholder='Comment'
-                            className='text-black w-full rounded-md bg-gray-400 border p-2 text-sm outline-none placeholder:text-gray-700'
+                            className='text-white w-full rounded-md bg-gray-400 border p-2 text-sm outline-none placeholder:text-gray-700 bg-[#444]'
                         />
                         <button
                             type='submit'
                             onClick={handleSubmit}
-                            className='flex justify-center items-center bg-orange text-sm font-semibold rounded-md py-2 px-4 hover:bg-orangeHover transition-all duration-300'
+                            className='flex justify-center items-center bg-orange text-xs lg:text-sm font-semibold rounded-md py-2 px-4 hover:bg-orangeHover transition-all duration-300'
                         >
                             Send
                         </button>

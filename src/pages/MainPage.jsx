@@ -20,7 +20,7 @@ export const MainPage = () => {
     }
 
     return (
-        <div className='w-1/2 mx-auto py-10 flex flex-col gap-10'>
+        <div className='w-96 lg:w-1/2 mx-auto py-5 lg:py-10 flex flex-col gap-5 lg:gap-10'>
             {posts?.map((post, index) => (
                         <PostItem post={post} key={index} />
             ))}

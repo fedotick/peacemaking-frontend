@@ -39,7 +39,7 @@ export const LoginPage = () => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder='Email'
-                    className='p-3 text-xs lg:text-sm text-black outline-none rounded-md bg-[#444]'
+                    className='p-3 text-xs lg:text-sm text-white outline-none rounded-md bg-[#444]'
                 />
             </label>
             <label className='font-medium text-base lg:text-lg flex flex-col'>
@@ -49,7 +49,7 @@ export const LoginPage = () => {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     placeholder='Password'
-                    className='p-3 text-xs lg:text-sm text-black outline-none rounded-md bg-[#444]'
+                    className='p-3 text-xs lg:text-sm text-white outline-none rounded-md bg-[#444]'
                 />
             </label>
             <div className='mt-[27px]'>

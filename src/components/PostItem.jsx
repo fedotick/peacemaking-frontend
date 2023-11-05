@@ -16,7 +16,7 @@ export const PostItem = ({ post }) => {
         <Link to={`/${post._id}`} className='hover:bg-[#171717] transition-all duration-300'>
             <div className='flex flex-col mx-auto border rounded-md border-gray overflow-hidden'>
                 <div
-                    className={post.imageURL ? 'flex rounded-sm h-80' : 'flex rounded-sm'}
+                    className={post.imageURL ? 'flex rounded-sm h-40 lg:h-80' : 'flex rounded-sm'}
                 >
                     {post.imageURL && (
                         <img src={`http://localhost:7777/${post.imageURL}`} alt="IMG" className='object-cover w-full' />
@@ -24,15 +24,15 @@ export const PostItem = ({ post }) => {
                 </div>
                 <div className='flex flex-col gap-y-[15px] px-[30px] py-[25px]'>
                     <div>
-                        <div className='text-lg font-normal'>
+                        <div className='text-base lg:text-lg font-normal'>
                             {post.username}
                         </div>
-                        <div className='text-xs text-zinc-400'>
+                        <div className='text-[11px] lg:text-xs text-zinc-400'>
                             <Moment date={post.createdAt} format='D MMM YYYY' />
                         </div>
                     </div>
-                    <div className='font-black text-3xl'>{post.title}</div>
-                    <p className='text-sm text-gray line-clamp-4'>{post.text}</p>
+                    <div className='font-black text-2xl lg:text-3xl'>{post.title}</div>
+                    <p className='text-xs lg:text-sm text-gray line-clamp-4'>{post.text}</p>
                     <div className='flex gap-3 items-center justify-end mt-2'>
                         <button className='flex items-center justify-center gap-2 text-xs text-white opacity-50'>
                             <AiFillEye /> <span>{post.views}</span>
