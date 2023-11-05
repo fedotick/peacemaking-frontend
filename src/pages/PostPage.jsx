@@ -91,7 +91,7 @@ export const PostPage = () => {
                                 <Moment date={post.createdAt} format='D MMM YYYY' />
                             </div>
                         </div>
-                        <div className='font-black text-2xl lg:text-3xl'>{post.title}</div>
+                        <div className='font-black text-2xl mb-4 lg:text-3xl'>{post.title}</div>
                         <p className='text-xs lg:text-sm text-gray line-clamp-4'>{post.text}</p>
                     <div className='flex gap-3 items-center mt-2 justify-between'>
                         <div className='flex gap-3 mt-4'>
